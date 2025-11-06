@@ -35,4 +35,3 @@ stateDiagram
   FinalizarCorrida --> Cliente: Fim da Viagem
   Cliente --> AvaliaoDaCorrida
   AvaliaoDaCorrida --> [*]
-```
