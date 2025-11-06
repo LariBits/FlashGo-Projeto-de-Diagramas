@@ -2,6 +2,7 @@
 config:
   layout: elk
 ---
+
 stateDiagram direction LR
   [*] --> Fazerlogin
   [*] --> Criarconta
@@ -34,3 +35,4 @@ stateDiagram direction LR
   FinalizarCorrida --> Cliente: Fim da Viagem
   Cliente --> AvaliaoDaCorrida
   AvaliaoDaCorrida --> [*]
+``` 
