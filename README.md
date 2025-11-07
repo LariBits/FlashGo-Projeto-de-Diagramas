@@ -2,11 +2,11 @@
 
 ## Equipe do Projeto
 
-| Nome     | Função Principal                     |
-|-----------|--------------------------------------|
-| **Larissa** | Gestão de Projeto e Requisitos       |
-| **Erika**   | Modelagem de Dados e Arquitetura     |
-| **Karen**   | UX/UI e Desenvolvimento Front-end    |
+| Nome     |
+|-----------|
+| **Larissa** |
+| **Erika**   |
+| **Karen**   |
 
 
 ## 🇧🇷 O Desafio: Choque de Inovação e Concorrência Digital
