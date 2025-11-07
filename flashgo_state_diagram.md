@@ -1,37 +1,46 @@
----
-config:
-  layout: elk
----
-stateDiagram
-  direction LR
-  [*] --> Fazerlogin
-  [*] --> Criarconta
-  Criarconta --> Cliente: Cliente/Usuário
-  Criarconta --> Motorista: Motorista/Usuário
-  Fazerlogin --> Conta
-  Conta --> Cliente
-  Conta --> Motorista
-  Motorista --> IniciarServiço
-  Cliente --> SolicitarServiço
-  SolicitarServiço --> Pagamento
-  Pagamento --> Credito
-  Pagamento --> Debito
-  Pagamento --> Dinheiro
-  Pagamento --> Pix
-  Pix --> Negado
-  Debito --> Negado
-  Credito --> Negado
-  Dinheiro --> Negado
-  Pix --> Aprovado
-  Dinheiro --> Aprovado
-  Credito --> Aprovado
-  Debito --> Aprovado
-  Negado --> SolicitarServiço: Tentar outro pagamento
-  Aprovado --> EsperandoMotorista
-  EsperandoMotorista --> ClienteEmEspera: Notificação ao Cliente
-  IniciarServiço --> ClienteEmEspera: Motorista pronto
-  ClienteEmEspera --> CorridaEmAndamento
-  CorridaEmAndamento --> FinalizarCorrida
-  FinalizarCorrida --> Cliente: Fim da Viagem
-  Cliente --> AvaliaoDaCorrida
-  AvaliaoDaCorrida --> [*]
+```mermaid
+stateDiagram-v2
+    direction LR
+
+    [*] --> FazerLogin
+    [*] --> CriarConta
+
+    CriarConta --> Cliente
+    CriarConta --> Motorista
+
+    FazerLogin --> Conta
+    Conta --> Cliente
+    Conta --> Motorista
+
+    Cliente --> SolicitarServico
+    Motorista --> IniciarServico
+
+    SolicitarServico --> Pagamento
+
+    Pagamento --> Credito
+    Pagamento --> Debito
+    Pagamento --> Dinheiro
+    Pagamento --> Pix
+
+    Credito --> Negado
+    Debito --> Negado
+    Dinheiro --> Negado
+    Pix --> Negado
+
+    Credito --> Aprovado
+    Debito --> Aprovado
+    Dinheiro --> Aprovado
+    Pix --> Aprovado
+
+    Negado --> SolicitarServico : tentar outro\nmetodo de pagamento
+
+    Aprovado --> EsperandoMotorista
+    EsperandoMotorista --> ClienteEmEspera : notificar cliente
+    IniciarServico --> ClienteEmEspera : motorista pronto
+
+    ClienteEmEspera --> CorridaEmAndamento
+    CorridaEmAndamento --> FinalizarCorrida
+    FinalizarCorrida --> Cliente : fim da viagem
+
+    Cliente --> AvaliacaoDaCorrida
+    AvaliacaoDaCorrida --> [*]
