@@ -2,12 +2,9 @@
 
 ## Equipe do Projeto
 
-| Nome     |
-|-----------|
-| **Larissa** |
-| **Erika**   |
-| **Karen**   |
-
+- **Larissa**
+- **Erika**
+- **Karen**
 
 ## 🇧🇷 O Desafio: Choque de Inovação e Concorrência Digital
 
