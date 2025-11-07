@@ -1,10 +1,7 @@
+```mermaid
 classDiagram
     direction LR
 
-    %% Configuração de Estilo (Opcional, mas ajuda na leitura)
-    %% Note: mermaid-live-editor usually handles layout, but explicit grouping helps mental model.
-
-    %% Classes de Usuário e Autenticação
     class Usuario {
         +String idUsuario
         +String nome
@@ -26,62 +23,51 @@ classDiagram
         +Float scoreAvaliacao
         +aceitarCorrida(corridaId)
         +iniciarGPS(destino)
-        +identificarProximoCliente(corridaId)
+        +identificarProximoCliente()
     }
 
-    %% Classes de Serviço e Transporte
     class Corrida {
         +String idCorrida
         +String origem
         +String destino
-        +TipoVeiculo tipoVeiculo  << Enum: Carro, Moto >>
-        +String status (Em andamento, Finalizada, Cancelada)
+        +TipoVeiculo tipoVeiculo
+        +String status
         +Float valorTotal
         +Date horaSolicitacao
         +calcularPreco()
         +finalizar()
     }
-    
+
     class Veiculo {
         +String placa
         +String modelo
         +String cor
-        +TipoVeiculo tipo << Enum: Carro, Moto >>
+        +TipoVeiculo tipo
     }
 
-    %% Classes de Feedback e Financeiro
     class Pagamento {
         +String idPagamento
-        +MetodoPagamento metodo << Enum: Crédito, Débito, Pix, Dinheiro >>
+        +MetodoPagamento metodo
         +Float valor
-        +String statusTransacao (Aprovado, Negado, Pendente)
+        +String statusTransacao
         +processarPagamento()
     }
     
     class Avaliacao {
         +String idAvaliacao
-        +Integer nota (1..5)
+        +Integer nota
         +String comentario
         +registrarAvaliacao()
     }
 
-    %% RELACIONAMENTOS (Formatação UML com Cardinalidade)
-    
-    %% Herança
     Usuario <|-- Cliente
     Usuario <|-- Motorista
     
-    %% Associações Principais (Cliente, Motorista, Corrida)
     Cliente "1" -- "0..*" Corrida : solicita
     Motorista "1" -- "0..*" Corrida : realiza
-    
-    %% Composição/Agregação (Veículo, Corrida, Pagamento, Avaliação)
-    Veiculo "1" -- "0..1" Corrida : usado em
+
     Motorista "1" -- "1" Veiculo : dirige
-    
-    Corrida "1" -- "0..1" Avaliacao : resulta em
+    Veiculo "1" -- "0..1" Corrida : utilizado em
+
     Corrida "1" -- "1" Pagamento : inclui
-    
-    %% Notas e Características
-    note for Veiculo "Inclui carros e motocicletas."
-    note for Pagamento "Método: Cartão de Crédito, Débito, Pix, ou Dinheiro. Status: Controla aprovação/negação."
+    Corrida "1" -- "0..1" Avaliacao : gera
