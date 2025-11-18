@@ -2,11 +2,11 @@
 
 ## Equipe do Projeto
 
-- **Larissa**
-- **Erika**
-- **Karen**
+- **Larissa Silva**
+- **Erika Toledo**
+- **Karen Evelyn**
 
-## 🇧🇷 O Desafio: Choque de Inovação e Concorrência Digital
+## O Desafio: Choque de Inovação e Concorrência Digital
 
 A **FlashGO**, uma empresa de táxi tradicional, ficou à margem da Revolução Digital. O mercado de transporte de passageiros exige modernização imediata, e a empresa enfrenta uma crise de competitividade devido a:
 
@@ -19,7 +19,7 @@ A **FlashGO**, uma empresa de táxi tradicional, ficou à margem da Revolução 
 
 ## Solução Proposta:
 
-A solução é criar o aplicativo **FlashGO**, uma plataforma de transporte simples, intuitiva e acessível, projetada para atender tanto o cliente moderno quanto o motorista experiente.
+A solução é criar o aplicativo **FlashGO**, uma plataforma de transporte simples, intuitiva e acessível, projetada para atender tanto o cliente moderno quanto o motorista.
 
 ---
 
@@ -33,12 +33,14 @@ A solução é criar o aplicativo **FlashGO**, uma plataforma de transporte simp
 
 ---
 
-## 📐 Arquitetura e Modelagem
+## Arquitetura e Modelagem
 
 A arquitetura do sistema foi desenvolvida com base em **diagramas UML**, garantindo clareza e funcionalidade.
+### 1. Diagrama de Caso de uso
+> ![imagem do diagrama de caso de uso]()
 
 ### 1. Diagrama de Classes  
-> 🔗 *Ver Diagrama de Classes* (https://github.com/LariBits/FlashGo-Projeto-de-Diagramas/blob/main/class_diagram.md)
+> *Ver Diagrama de Classes* (https://github.com/LariBits/FlashGo-Projeto-de-Diagramas/blob/main/class_diagram.md)
 
 ### 2. Diagrama de Estados 
-> 🔗 *Ver Diagrama de Estados* (https://github.com/LariBits/FlashGo-Projeto-de-Diagramas/blob/main/flashgo_state_diagram.md)
+> *Ver Diagrama de Estados* (https://github.com/LariBits/FlashGo-Projeto-de-Diagramas/blob/main/flashgo_state_diagram.md)
