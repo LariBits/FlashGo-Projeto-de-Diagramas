@@ -37,9 +37,8 @@ A solução é criar o aplicativo **FlashGO**, uma plataforma de transporte simp
 
 A arquitetura do sistema foi desenvolvida com base em **diagramas UML**, garantindo clareza e funcionalidade.
 ### 1. Diagrama de Caso de uso
-> ![<img width="650" height="1141" alt="Untitled (1)" src="https://github.com/user-attachments/assets/b4a7b737-06cd-439d-b098-c42fcafbcc7b" />
-]()
-> 
+> ![<img width="650" height="1141" alt="image" src="https://github.com/user-attachments/assets/af5dfc3a-1e58-4b8c-8b82-3525e83fe2da" />
+]()> 
 
 ### 1. Diagrama de Classes  
 > *Ver Diagrama de Classes* (https://github.com/LariBits/FlashGo-Projeto-de-Diagramas/blob/main/class_diagram.md)
